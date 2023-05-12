@@ -3,16 +3,17 @@
         {
             "name": "Win32",
             "includePath": [
-               "C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++",
-               "C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32",
-               "C:/MinGW/lib/gcc/mingw32/9.2.0/include",
-               "${workspaceFolder}"
+                "C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++",
+                "C:/MinGW/lib/gcc/mingw32/9.2.0/include/c++/mingw32",
+                "C:/MinGW/lib/gcc/mingw32/9.2.0/include",
+                "${workspaceFolder}"
             ],
             "defines": [
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE"
-            ]
+            ],
+            "configurationProvider": "ms-vscode.makefile-tools"
         }
     ],
     "version": 4
