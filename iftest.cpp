@@ -14,15 +14,15 @@ int main(int argc, char const *argv[])
 
  cout << "Entre un deuxième nombre: ";
  cin >> nombre2;
- cout << nombre2;
+ cout << nombre2 << endl;
 
  if (nombre1 > nombre2)
  {
-  cout << nombre1 << "est plus grad que" << nombre2 << endl;
+  cout << nombre1 << " est plus grad que " << nombre2 << endl;
  }
  else
  {
-  cout << nombre1 << "est plus petit que" << nombre2 << endl;
+  cout << nombre1 << " est plus petit que " << nombre2 << endl;
  }
 
  return 0;

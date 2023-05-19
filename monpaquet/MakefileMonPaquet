@@ -1,0 +1,18 @@
+MCLASSPATH = "C:\Users\shaka\OneDrive\Documents\works\works\web_projects\Learn java & c++\monpaquet"
+MDIR = "C:\Users\shaka\OneDrive\Documents\works\works\web_projects\Learn java & c++\monpaquet"
+
+all: java
+
+java: ConversionMonnaie.class Salaire.class Personne.class TestMonPaquet.class
+
+ConversionMonnaie.class: ConversionMonnaie.java
+	javac -d $(MDIR) -classpath $(MCLASSPATH) ConversionMonnaie.java
+
+Salaire.class: Salaire.java
+	javac -d $(MDIR) -classpath $(MCLASSPATH) Salaire.java
+
+Personne.class: Personne.java
+	javac -d $(MDIR) -classpath $(MCLASSPATH) Personne.java
+
+TestMonPaquet.class: TestMonPaquet.java
+	javac -d $(MDIR) -classpath $(MCLASSPATH) TestMonPaquet.java
