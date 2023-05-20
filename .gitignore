@@ -1,1 +1,7 @@
 _exercices
+*.html
+*.css
+*.js
+legal/
+script-dir/
+resources/
