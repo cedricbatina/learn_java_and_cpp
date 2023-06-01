@@ -1,0 +1,52 @@
+import java.io.*;
+
+public class SauveOthello{
+ private String fichier;
+ private static final int dim = 10;
+
+ private int[][] othello = new int[dim][dim];
+
+ public SauveOthello(String fichier_de_sauvetage) {
+  fichier = fichier_de_sauvetage;
+  for (int j =1; j< dim-1; j++) {
+for(int i = 1; i < dim- 1 ; i++) {
+   othello[i][j] = 0;
+
+}
+
+
+  }
+ 
+  othello[4][5] = 1; // blanc
+ othello[5][4] = 1; // blanc
+ othello[4][4] = 2; // noir
+ othello[5][5] = 2; // noir
+
+} 
+public boolean sauve() {
+ File outFile = new File(fichier);
+
+try {
+ FileOutputStream out = new FileOutputStream(outFile);
+ for (int j =1 ; j < dim-1; j++) {
+  for (int i = 1; i < dim-1; i++) {
+   out.write(othello[i][j]);
+  }
+ }
+out.close();
+}
+catch (IOException ioe){
+ return false;
+}
+return true;
+}
+public static void main(String[] args) {
+ SauveOthello mon_sauvetage = new SauveOthello("othello.bin");
+ if (mon_sauvetage.sauve()) {
+  System.out.println("Le jeu Othello en cours a été sauvegardé avec succès!");
+ }
+ else {
+  System.out.println("Erreur de sauvegarde");
+ }
+}
+}
