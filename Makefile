@@ -1,6 +1,6 @@
 # Premier Makefile
 
-all: cpp java
+all: cpp java salut.dll
 
 cpp: hello.exe hello2.exe
 

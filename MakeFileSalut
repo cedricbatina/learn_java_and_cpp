@@ -1,0 +1,20 @@
+JDK = C:\jdk-20.0.1
+
+all: java cpp salut.dll
+
+java: MonPremierJNI.class SalutCPP.h 
+
+cpp: SalutCPP.o
+
+MonPremierJNI.class: MonPremierJNI.java
+                     javac MonPremierJNI.java
+
+SalutCPP.h: MonPremierJNI.class
+	           javah SalutCPP
+
+SalutCPP.o: MonPremierJNI.class SalutCPP.cpp
+	g++ -I$(JDK)include -I$(JDK)/include/win32 -c SalutCPP.cpp
+
+salut.dll: SalutCPP.o
+    @dllwrap --driver-name=c++ --output-def salut.def --add-stdcall-alias -o salut.dll -s SalutCPP.o
+
