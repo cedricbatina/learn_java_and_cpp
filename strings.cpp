@@ -26,8 +26,7 @@ int main(int argc, char const *argv[])
 
  cinq_char[5] = 0;
 
- char tampon[bloc];
- int octets_lus;
+ char tampon[bloc] int octets_lus;
  for (;;)
  {
   infile.read(tampon, bloc);
